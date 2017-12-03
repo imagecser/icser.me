@@ -11,7 +11,7 @@ def main_page():
 
 @app.route('/beating-heart/')
 def beating_heart_page():
-    return render_template('beating_heart/index.html')
+    return render_template('beating-heart/index.html')
 
 
 @app.route('/favicon.ico')
