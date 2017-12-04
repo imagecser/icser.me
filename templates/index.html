@@ -5,9 +5,15 @@
 <title>icser</title>
 <style type="text/css">
 
-body {
+html, body {
     background-color:#f5f5f5;
+    height: 100%;
     }
+
+.wrap {
+    min-height:100%;
+    overflow: hidden;
+}
 
 .nav{
     list-style-type:none;
@@ -57,11 +63,54 @@ body {
     width: 900px;
 }
 
+#copyright{margin-top:-60px; height: 30px; text-align:center;width:100%;color:#666}
+#copyright a{color:#666}
+
+.contact input[type="text"], .contact input[type="email"], .contact textarea {
+    outline: none;
+    border: 3px solid #6d6868;
+    padding: 15px 15px;
+    background: transparent;
+    color: #514c4c;
+    font-size: 14px;
+    letter-spacing: 2px;
+    width: 40%;
+    margin: 2em 0 1em 0em;
+    position: relative;
+    left:10%;
+}
+
+.contact textarea {
+    width: 90%;
+    left: 5%;
+    min-height:240px;
+    resize:none;
+    margin:1em 0;
+}
+
+
+.contact input[type="submit"] {
+    outline: none;
+    border:none;
+    padding:13px 54px;
+    background:#b58ad1;
+    color: #514c4c;
+    font-size: 17px;
+    margin: 2em 0 2em 21em;
+    transition: 0.5s ease-in-out;
+    letter-spacing:1px;
+    cursor:pointer;
+}
+
+.contact input[type="submit"]:hover {
+    background:#ff2d37;
+}
 
 </style>
 </head>
 
 <body>
+<div class="wrap">
 
 <div class="nav">
 <a href="/" id="fleft" style="border-left:none;">Home</a>
@@ -71,8 +120,18 @@ body {
 </div>
 
 <div class="love">
-<p>郭静雯是个傻子= =</p>
-<p align='right'>——孙治</p>
+<p align="middle">郭静雯是个傻子 = =</p>
+<form style="background: #c7c4c8;" class="contact" method="post">
+<input type="text" name="name" placeholder="Your Name">
+<input type="email" name="email" placeholder="Your Email"><br>
+<textarea name="message" placeholder="Message"></textarea>
+<input type="submit" name="submit" value="Submit">
+</form>
+</div>
+</div>
+<div id="copyright">
+Github Page <a href="https://github.com/imagecser/">imagecser</a></br>
+Copyright © <a href='https://www.icser.me'>icser.me</a> 2016-2018
 </div>
 
 </body>

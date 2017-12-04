@@ -1,4 +1,5 @@
-from flask import send_from_directory, render_template, Flask, request
+from flask import send_from_directory, render_template, Flask, request, jsonify
+from werkzeug.exceptions import HTTPException
 import templates.calc.calc as calc
 import os
 app = Flask(__name__)
@@ -25,8 +26,9 @@ def calc_line(line='0'):
 
 
 @app.errorhandler(404)
+@app.errorhandler(405)
 def error404(error):
-    return render_template('errors/index.html'), 404
+    return render_template('errors/index.html', code=str(error.code)), error.code
 
 
 if __name__ == '__main__':
