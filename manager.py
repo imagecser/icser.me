@@ -1,6 +1,7 @@
 from flask import send_from_directory, render_template, Flask, request, jsonify
 from werkzeug.exceptions import HTTPException
 import templates.calc.calc as calc
+import templates.image.image as image
 import os
 app = Flask(__name__)
 
@@ -13,6 +14,10 @@ def main_page():
 @app.route('/beating-heart/')
 def beating_heart_page():
     return render_template('beating-heart/index.html')
+
+@app.route('/image/')
+def image_page():
+    return render_template('image/index.html', l_src=image.image_random(6900))
 
 
 @app.route('/favicon.ico')
