@@ -17,8 +17,11 @@ def beating_heart_page():
 
 @app.route('/image/')
 def image_page():
-    return render_template('image/index.html', l_src=image.image_random(6900))
+    return render_template('image/index.html', l_src=image.image_random(10000), dirc="file", suffix="")
 
+@app.route('/ds/')
+def ds_page():
+    return render_template('image/index.html', l_src=image.image_random(9392), dirc="ds", suffix="ds")
 
 @app.route('/favicon.ico')
 def favicon():

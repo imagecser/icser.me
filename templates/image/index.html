@@ -99,11 +99,13 @@
 
 <div style="margin: auto; width: 80%; margin-top:10px;" id="main">
 
-{% for url in l_src %}
-<a href="{{ url }}" class="swipebox" title="">
+{% for i in l_src %}
+{% set aurl = "https://img.icser.me/" + dirc + "/" + i + suffix + ".jpg" %}
+{% set burl = "https://img.icser.me/" + dirc + "/" + i + ".jpg" %}
+<a href="{{ aurl }}" class="swipebox" title="">
 <div class="box">
 <div class="pic">
-<img src="{{ url }}" alt="image">
+<img src="{{ burl }}" alt="image">
 </div>
 </div>
 </a>
